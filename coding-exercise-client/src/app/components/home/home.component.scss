@@ -1,0 +1,23 @@
+.card__container {
+  margin: 20px;
+
+  &.loading {
+    height: 60px;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+.no-data__placeholder {
+  text-align: center;
+}
+
+.mat-row {
+  cursor: pointer;
+
+  &:hover {
+    background-color: aliceblue;
+  }
+}

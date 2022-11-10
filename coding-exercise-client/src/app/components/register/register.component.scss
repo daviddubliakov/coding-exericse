@@ -1,0 +1,44 @@
+.register__wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #673ab7;
+
+  .mat-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 440px;
+
+    .register__title {
+      width: fit-content;
+      margin-bottom: 20px;
+    }
+
+    .register__form {
+      width: 100%;
+
+      .mat-form-field {
+        width: 100%;
+      }
+
+      .register__btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .account-exists__hint {
+        margin-top: 10px;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+
+::ng-deep .success-snackbar {
+  white-space: pre-wrap;
+}

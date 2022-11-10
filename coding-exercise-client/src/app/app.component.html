@@ -1,0 +1,24 @@
+<div id="app">
+  <mat-toolbar color="primary" *ngIf="isLoggedIn">
+    <mat-toolbar-row>
+      <span class="menu-item">
+        BussApp.io
+      </span>
+      <span class="menu-item">
+        <a routerLink="/home">Home</a>
+      </span>
+      <button
+        mat-icon-button
+        color="accent"
+        class="logout__btn"
+        (click)="logout()"
+      >
+        <mat-icon>logout</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.card__container {
+  margin: 20px;
+
+  &.loading {
+    height: 60px;
+  }
+
+  h1 {
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    .filed-label {
+      font-weight: 500;
+      padding-right: 7px;
+    }
+  }
+}
+
+.details__container {
+  display: flex;
+  justify-content: space-between;
+}

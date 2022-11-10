@@ -1,0 +1,36 @@
+<mat-card class="card__container" [ngClass]="{ loading: loadingBus }">
+  <div *ngIf="bus !== null && !loadingBus">
+    <h1>Bus Details:</h1>
+    <div class="details__container">
+      <ul>
+        <li>
+          <span class="filed-label">ID:</span>
+          <span>{{ bus.id }}</span>
+        </li>
+        <li>
+          <span class="filed-label">Year:</span>
+          <span>{{ bus.year }}</span>
+        </li>
+        <li>
+          <span class="filed-label">Manufacturer:</span>
+          <span>{{ bus.manufacturer }}</span>
+        </li>
+        <li>
+          <span class="filed-label">Model:</span>
+          <span>{{ bus.model }}</span>
+        </li>
+        <li>
+          <span class="filed-label">Is Electric:</span>
+          <span>{{ bus.isElectric ? 'Yes' : 'No' }}</span>
+        </li>
+      </ul>
+      <img src="assets/images/bus.png" alt="Bus" width="30%" />
+    </div>
+  </div>
+
+  <h1 class="no-data__placeholder" *ngIf="bus === null && !loadingBus">
+    Bus is not found
+  </h1>
+
+  <app-loader *ngIf="loadingBus"></app-loader>
+</mat-card>
