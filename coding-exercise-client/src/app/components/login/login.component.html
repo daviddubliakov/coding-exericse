@@ -1,0 +1,31 @@
+<div class="login__wrapper">
+  <mat-card>
+    <mat-card-title class="login__title">Log Into BusApp.io</mat-card-title>
+    <form class="login__form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="email"
+          errorState="true"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          placeholder="Password"
+          formControlName="password"
+          type="password"
+        />
+      </mat-form-field>
+      <button class="login__btn" mat-raised-button color="primary">
+        Log In
+      </button>
+      <span class="account-exists__hint">
+        <a routerLink="/register">Sign up for BusApp.io</a>
+      </span>
+    </form>
+  </mat-card>
+</div>
